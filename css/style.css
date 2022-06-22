@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --text-color: #00aa00;
+}
+body {
+  color: var(--text-color);
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(51, 51, 51, 1) 50%,
+    rgba(0, 0, 0, 1) 85%
+  );
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+h1 {
+  font-size: 50px;
+  letter-spacing: -5px;
+  margin-bottom: 20px;
+  animation: fadeIn 5s;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+p {
+  margin: 20px 0;
+  color: var(--text-color);
+}
+nav {
+  width: 30%;
+}
+nav ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li {
+  color: var(--text-color);
+  cursor: pointer;
+}
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  margin: auto;
+  max-width: 600px;
+}
+.wb-body {
+  background: #111;
+  padding: 20px;
+}
+.hidden {
+  display: none;
+}
+.cursor {
+  animation: 1s blink step-end infinite;
+  font-weight: 700;
+}
+.cssmarquee {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+.cssmarquee-top {
+  animation: cssmarquee-left 10s alternate infinite;
+  color: rgb(91, 91, 91);
+  height: 100%;
+  line-height: 50px;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  transform: translateX(100%);
+  width: 100%;
+}
+.cssmarquee-top:hover {
+  color: #333;
+  cursor: none;
+}
+.cssmarquee-bottom {
+  animation: cssmarquee-right 10s alternate infinite;
+  color: rgb(91, 91, 91);
+  height: 100%;
+  line-height: 50px;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  transform: translateX(100%);
+  width: 100%;
+}
+.cssmarquee-bottom:hover {
+  color: #333;
+  cursor: none;
+}
+@keyframes cssmarquee-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes cssmarquee-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: var(--text-color);
+  }
+}
+.color-mix:hover {
+  animation: color-rotate 5s infinite;
+  cursor: progress;
+}
+@keyframes color-rotate {
+  0% {
+    color: red;
+  }
+  20% {
+    color: yellow;
+  }
+  40% {
+    color: rgb(34, 213, 180);
+  }
+  60% {
+    color: blue;
+  }
+  80% {
+    color: white;
+  }
+  100% {
+    color: red;
+  }
+}
+@-webkit-keyframes color-mix {
+  0% {
+    color: red;
+  }
+  20% {
+    color: yellow;
+  }
+  40% {
+    color: rgb(34, 213, 180);
+  }
+  60% {
+    color: blue;
+  }
+  80% {
+    color: white;
+  }
+  100% {
+    color: red;
+  }
+}
+.magnify:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+
+  /* IE 9 */
+  /* Safari 3-8 */
+}
+.blink-hover:hover {
+  animation: blink 1s infinite;
+}
+.blink {
+  animation: blink 2s infinite;
+}
+
+.default {
+  cursor: default;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
